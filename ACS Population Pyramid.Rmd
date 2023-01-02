@@ -13,18 +13,15 @@ library(tidyverse)
 library(dplyr)
 library(plyr)
 library(tidycensus)
-
-census_api_key('041f118e070667dea491978da5e7c2bedb842535') # Request API key from US Census website
+library(gganimate)
+library(animation)
 
 ```
 
 
 ```{r Animated pyramid 2010-2020}
 
-library(gganimate)
-library(animation)
-
-census_api_key('041f118e070667dea491978da5e7c2bedb842535')
+census_api_key('Census API Key') # Request API key from US Census website
 
 # Loading all the variables because Variable IDs may vary between years.
 acs10 <- load_variables(2010, "acs5", cache = FALSE) 
